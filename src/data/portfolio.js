@@ -123,7 +123,7 @@ export const extraProjects = [
     repoUrl: 'https://github.com/ferreira-guhh/clone-notion',
     highlight: 'Funcionalidades completas',
     color: 'teal',
-  },
+  },  
 ]
 
 export const dashboardStats = [
