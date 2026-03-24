@@ -111,55 +111,18 @@ export const skills = {
 }
 
 // ─── Projetos extras (aparecem ao clicar "Ver mais") ───
-// Adicione quantos quiser aqui — mesma estrutura dos projetos principais
 export const extraProjects = [
   {
     id: 5,
-    title: 'Clone do Spotify',
-    subtitle: 'UI + integração de API',
+    title: 'Clone do Notion',
+    subtitle: 'Organização pessoal',
     description:
-      'Recriação do player do Spotify com React, consumindo a API oficial. Autenticação OAuth, busca de músicas, player funcional e playlist dinâmica.',
-    tags: ['React', 'Spotify API', 'OAuth', 'Tailwind CSS'],
-    liveUrl: 'https://spotify-clone.seusite.com',
-    repoUrl: 'https://github.com/seuusuario/spotify-clone',
-    highlight: 'API + OAuth',
+      'Recriação do Notion com React, permitindo criar páginas, listas de tarefas e notas. Foco em usabilidade e design minimalista.(Teste do site: email: teste@exemplo.com, senha: senha123)',
+    tags: ['React', 'supabase', 'OAuth', 'Tailwind CSS'],
+    liveUrl: 'https://clone-notion-nine.vercel.app',
+    repoUrl: 'https://github.com/ferreira-guhh/clone-notion',
+    highlight: 'Funcionalidades completas',
     color: 'teal',
-  },
-  {
-    id: 6,
-    title: 'Dashboard de Finanças',
-    subtitle: 'Controle pessoal',
-    description:
-      'App de controle financeiro pessoal com gráficos interativos, categorias de gastos, histórico mensal e exportação em CSV.',
-    tags: ['React', 'Chart.js', 'LocalStorage', 'Tailwind'],
-    liveUrl: 'https://financas.seusite.com',
-    repoUrl: 'https://github.com/seuusuario/dashboard-financas',
-    highlight: 'Gráficos + Dados',
-    color: 'violet',
-  },
-  {
-    id: 7,
-    title: 'Blog com Markdown',
-    subtitle: 'Conteúdo dinâmico',
-    description:
-      'Blog estático gerado a partir de arquivos Markdown, com sistema de tags, busca em tempo real e modo claro/escuro.',
-    tags: ['React', 'Vite', 'remark', 'Tailwind CSS'],
-    liveUrl: 'https://blog.seusite.com',
-    repoUrl: 'https://github.com/seuusuario/blog-markdown',
-    highlight: 'SSG + Markdown',
-    color: 'electric',
-  },
-  {
-    id: 8,
-    title: 'Calculadora de IMC',
-    subtitle: 'Ferramenta de saúde',
-    description:
-      'Calculadora de IMC com histórico de medições, gráfico de evolução e dicas personalizadas por faixa de peso.',
-    tags: ['React', 'Chart.js', 'LocalStorage'],
-    liveUrl: 'https://imc.seusite.com',
-    repoUrl: 'https://github.com/seuusuario/calculadora-imc',
-    highlight: 'Histórico + Gráfico',
-    color: 'pink',
   },
 ]
 

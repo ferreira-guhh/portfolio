@@ -81,7 +81,7 @@ function FeaturedCard({ project }) {
           ))}
           <div className="mt-6 p-5 rounded-xl bg-gradient-to-br from-electric-500/10 to-violet-500/10
                           border border-white/[0.08] text-center">
-            <p className="stat-number text-5xl font-display font-bold">01</p>
+            <p className="stat-number text-5xl font-display font-bold">02</p>
             <p className="text-xs font-mono text-white/40 mt-1">sistema em produção</p>
           </div>
         </div>
