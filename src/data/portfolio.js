@@ -70,19 +70,19 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Portal de Jogos',
-    subtitle: 'Diversão interativa',
+    title: 'Life-OS',
+    subtitle: 'Organização pessoal',
     description:
-      'Diversão interativa. Coleção de jogos clássicos (como Jogo da Velha com IA simples) focados em interatividade. Ranking local entre jogadores.',
+      'Organização pessoal. Aplicativo para gerenciamento de tarefas, metas e hábitos. Interface intuitiva com visualização de progresso e integração com calendário.',
     problem:
-      'Explorar lógica de jogo, algoritmos de IA simples e animações interativas com React puro.',
-    tags: ['React', 'Framer Motion', 'LocalStorage', 'Tailwind CSS'],
+      'Ajudar usuários a manterem o foco e a produtividade, centralizando todas as suas atividades em um único lugar.',
+    tags: ['React', 'Redux', 'Tailwind CSS', 'D3.js', 'Supabase'],
     featured: false,
-    liveUrl: 'https://games.seusite.com',
-    repoUrl: 'https://github.com/ferreira-guhh/portal-de-jogos',
-    highlight: 'IA + Animações',
+    liveUrl: 'https://life-os-gamma-three.vercel.app/',
+    repoUrl: 'https://github.com/ferreira-guhh/life-os',
+    highlight: 'Produtividade + Visualização',
     color: 'pink',
-    metrics: ['IA no Jogo da Velha', 'Ranking local', '4 jogos'],
+    metrics: ['Gestão de tarefas', 'Metas e hábitos', 'Visualização de progresso'],
   },
 ]
 
@@ -126,6 +126,47 @@ export const extraProjects = [
     highlight: 'API + OAuth',
     color: 'teal',
   },
+  {
+  id: 6,
+    title: 'game-vault',
+    subtitle: 'Catálogo de jogos',
+    description:
+      'Aplicação que consome a RAWG Games API para exibir um catálogo de jogos. Permite filtrar por gênero, plataforma e popularidade, além de mostrar detalhes de cada jogo.',
+    tags: ['React', 'RAWG API', 'Axios', 'Tailwind CSS'],
+    liveUrl: 'https://www.linkedin.com/posts/gustavo-ferreira-alexandrino_reactjs-frontend-javascript-ugcPost-7405460161336897538-mLbG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE20EjgB01fVD0O4Y8GBatPAdDWkNi6FPOE',
+    repoUrl: 'https://github.com/ferreira-guhh/game-vault',
+    highlight: 'API + Filtragem',
+    color: 'violet',
+  },
+  {
+    id: 7,
+    title: 'Pyflix',
+    subtitle: 'Catalogo de filmes',
+    description:
+      'Aplicação que consome a API do The Movie Database (TMDb) para exibir um catálogo de filmes. Permite filtrar por gênero, ano e popularidade, além de mostrar detalhes de cada filme.',
+    tags: ['Python', 'Flask', 'TMDb API', 'SQLite'],
+    liveUrl: 'https://www.linkedin.com/posts/gustavo-ferreira-alexandrino_python-react-fullstack-ugcPost-7405724218136539137-AB_i?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE20EjgB01fVD0O4Y8GBatPAdDWkNi6FPOE',
+    repoUrl: 'https://github.com/ferreira-guhh/pyflix',
+    highlight: 'API + Filtragem',
+    color: 'blue',
+  },
+  {
+    id: 8,
+    title: 'Portal de Jogos',
+    subtitle: 'Diversão interativa',
+    description:
+      'Diversão interativa. Coleção de jogos clássicos (como Jogo da Velha com IA simples) focados em interatividade. Ranking local entre jogadores.',
+    problem:
+      'Explorar lógica de jogo, algoritmos de IA simples e animações interativas com React puro.',
+    tags: ['React', 'Framer Motion', 'LocalStorage', 'Tailwind CSS'],
+    featured: false,
+    liveUrl: 'https://games.seusite.com',
+    repoUrl: 'https://github.com/ferreira-guhh/portal-de-jogos',
+    highlight: 'IA + Animações',
+    color: 'pink',
+    metrics: ['IA no Jogo da Velha', 'Ranking local', '4 jogos'],
+  },
+
 ]
 
 export const dashboardStats = [
