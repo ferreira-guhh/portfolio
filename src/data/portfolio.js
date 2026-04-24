@@ -154,7 +154,7 @@ export const extraProjects = [
     title: 'Portal de Jogos',
     subtitle: 'Diversão interativa',
     description:
-      'Diversão interativa. Coleção de jogos clássicos (como Jogo da Velha com IA simples) focados em interatividade. Ranking local entre jogadores.',
+      'Diversão interativa. Coleção de jogos clássicos (como Jogo da Velha com IA simples) focados em interatividade. Ranking local entre jogadores. (Em Desenvolvimento, Sem lançamento previsto)',
     problem:
       'Explorar lógica de jogo, algoritmos de IA simples e animações interativas com React puro.',
     tags: ['React', 'Framer Motion', 'LocalStorage', 'Tailwind CSS'],
@@ -163,7 +163,7 @@ export const extraProjects = [
     repoUrl: 'https://github.com/ferreira-guhh/portal-de-jogos',
     highlight: 'IA + Animações',
     color: 'pink',
-    metrics: ['IA no Jogo da Velha', 'Ranking local', '4 jogos'],
+    metrics: ['IA no Jogo da Velha', 'Ranking local', '4 jogos',],
   },
 
 ]
