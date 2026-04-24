@@ -6,35 +6,35 @@ export const profile = {
   name: 'Gustavo Ferreira Alexandrino',
   role: 'Desenvolvedor Frontend',
   tagline: 'Transformo ideias em interfaces que as pessoas realmente usam.',
-  bio: `Sou estudante do 3º semestre de Ciência da Computação e desenvolvedor frontend focado no ecossistema React. Mais do que escrever código, gosto de criar experiências digitais que resolvem problemas reais, unindo estética e performance.
+  bio: `Sou estudante do 3º semestre de Ciência da Computação e desenvolvedor frontend focado no ecossistema React. Mais do que escrever código, gosto de criar aplicações robustas que entregam uma experiência fluida e resolvem problemas complexos, unindo estética e performance.
 
-Recentemente, atuei na digitalização completa de um negócio físico com 40 anos de mercado — tirando o projeto do zero até a produção — além de colaborar na arquitetura de sistemas SaaS com outros desenvolvedores.
+Recentemente, arquitetei e desenvolvi de ponta a ponta uma plataforma completa de e-commerce. O projeto engloba desde a jornada do usuário no catálogo e carrinho até um painel administrativo completo para gestão, validando minha capacidade de lidar com arquiteturas reais. Além disso, possuo vivência prática colaborando na estruturação de sistemas SaaS em equipe.
 
-Atualmente, busco uma oportunidade de estágio onde eu possa agregar valor imediato em times de produto e evoluir tecnicamente em direção ao desenvolvimento full stack.`,
+Atualmente, busco uma oportunidade como Desenvolvedor Júnior ou Estagiário, onde eu possa agregar valor imediato em times de produto e continuar minha evolução técnica em direção ao desenvolvimento full stack.`,
   location: 'Brasil',
   availableForWork: true,
   email: 'gualexandrino13@gmail.com',
   github: 'https://github.com/ferreira-guhh',
   linkedin: 'https://www.linkedin.com/in/gustavo-ferreira-alexandrino/',
-  whatsapp: '+5517981253926', // Substitua pelo seu número do WhatsApp
+  whatsapp: '+5517981253926', 
 }
 
 export const projects = [
   {
     id: 1,
-    title: 'Plataforma Digital - Bazar Ana Paula',
-    subtitle: 'Em produção desde 2024',
+    title: 'StoreCore - Plataforma E-commerce B2C',
+    subtitle: 'Arquitetura Full Stack',
     description:
-      'Plataforma web desenvolvida sob medida para o Bazar Ana Paula, um negócio físico com 40 anos de tradição. O foco do projeto foi conduzir a transformação digital da loja, modernizando o acesso aos produtos e otimizando a gestão do catálogo para os clientes locais.',
+      'Plataforma completa de e-commerce construída do zero para demonstrar o fluxo integral de um negócio online. O projeto contempla desde a experiência de navegação, busca e carrinho para o usuário final, até a integração fluida com um back-end próprio',
     problem:
-      'A loja operava exclusivamente com processos físicos e manuais há décadas. O sistema digitalizou o catálogo, expandiu a visibilidade da marca e preparou a empresa para atuar no ambiente online, unindo tradição e tecnologia.',
-    tags: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'Em uso real'],
+      'O desafio principal foi projetar uma arquitetura capaz de gerenciar múltiplos estados complexos (sessão de usuário, persistência de carrinho) e garantir o consumo eficiente de uma API RESTful construída em Node.js com banco de dados NoSQL.',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'REST API'],
     featured: true,
-    liveUrl: 'https://www.bazaranapaula.com.br/',
-    repoUrl: 'https://github.com/ferreira-guhh/bazar-ana-paula',
-    highlight: 'Projeto real em produção',
+    liveUrl: 'https://storecore-ecommerce.vercel.app/',
+    repoUrl: 'https://github.com/ferreira-guhh/storecore-ecommerce',
+    highlight: 'Sistemas Complexos End-to-End',
     color: 'electric',
-    metrics: ['Em uso real', '~60% mais eficiente', 'Painel admin completo'],
+    metrics: ['Fluxo completo de Checkout', 'Gerenciamento de estado global', 'Painel administrativo integrado', '💡 Dica para Avaliadores: Acesse a visão de gestão! No rodapé do e-commerce, clique no ícone de cadeado (🔓) e use o login de Recrutador para explorar o Painel Administrativo.'],
   },
   {
     id: 2,
@@ -112,7 +112,6 @@ export const skills = {
 }
 
 // ─── Projetos extras (aparecem ao clicar "Ver mais") ───
-// Adicione quantos quiser aqui — mesma estrutura dos projetos principais
 export const extraProjects = [
   {
     id: 5,

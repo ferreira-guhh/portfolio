@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { projects, extraProjects } from '../data/portfolio'
+import { Settings } from 'lucide-react';
 
 const colorMap = {
   electric: {
@@ -52,7 +53,7 @@ function FeaturedCard({ project }) {
           <h3 className="font-display text-3xl font-bold text-white mb-3">{project.title}</h3>
           <p className="text-white/60 leading-relaxed mb-5">{project.description}</p>
           <div className="mb-6 p-4 rounded-lg bg-white/[0.03] border border-white/[0.06]">
-            <p className="text-xs font-mono text-white/30 mb-1">problema resolvido</p>
+            <p className="text-xs font-mono text-white/30 mb-1">foco arquitetural</p>
             <p className="text-sm text-white/60">{project.problem}</p>
           </div>
           <div className="flex flex-wrap gap-2 mb-6">
@@ -80,9 +81,11 @@ function FeaturedCard({ project }) {
             </div>
           ))}
           <div className="mt-6 p-5 rounded-xl bg-gradient-to-br from-electric-500/10 to-violet-500/10
-                          border border-white/[0.08] text-center">
-            <p className="stat-number text-5xl font-display font-bold">02</p>
-            <p className="text-xs font-mono text-white/40 mt-1">sistema em produção</p>
+                          border border-white/[0.08] text-center flex flex-col items-center">
+            <div className="stat-number mb-2 flex justify-center">
+              <Settings className="block" size={28} aria-hidden="true" />
+            </div>
+            <p className="text-xs font-mono text-white/40 mt-1">Operações completas e rotas seguras</p>
           </div>
         </div>
       </div>

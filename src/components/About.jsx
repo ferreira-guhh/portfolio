@@ -8,8 +8,8 @@ const highlights = [
   },
   {
     icon: '◈',
-    title: 'Projeto Real em Produção',
-    desc: 'Já entreguei e mantenho um sistema usado por uma empresa real de varejo físico.',
+    title: 'Sistemas Complexos End-to-End',
+    desc: 'Capacidade de projetar e desenvolver plataformas completas, gerenciando desde a interface do usuário (UI) até painéis administrativos e rotas seguras.',
   },
   {
     icon: '◈',
