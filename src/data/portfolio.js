@@ -27,7 +27,7 @@ export const projects = [
     description:
       'Plataforma completa de e-commerce construída do zero para demonstrar o fluxo integral de um negócio online. O projeto contempla desde a experiência de navegação, busca e carrinho para o usuário final, até a integração fluida com um back-end próprio',
     problem:
-      'O desafio principal foi projetar uma arquitetura capaz de gerenciar múltiplos estados complexos (sessão de usuário, persistência de carrinho) e garantir o consumo eficiente de uma API RESTful construída em Node.js com banco de dados NoSQL.',
+      'O desafio principal foi projetar uma arquitetura capaz de gerenciar múltiplos estados complexos (sessão de usuário, persistência de carrinho) e garantir o consumo eficiente de uma API RESTful construída in Node.js com banco de dados NoSQL.',
     tags: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'REST API'],
     featured: true,
     liveUrl: 'https://storecore-ecommerce.vercel.app/',
@@ -63,7 +63,7 @@ export const projects = [
     tags: ['React', 'Node.js', 'Cheerio', 'Chart.js', 'Cron Jobs'],
     featured: false,
     liveUrl: 'https://www.linkedin.com/posts/gustavo-ferreira-alexandrino_python-flask-automation-activity-7405524969369030656-CN1b?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE20EjgB01fVD0O4Y8GBatPAdDWkNi6FPOE',
-    repoUrl: 'https://github.com/seuusuario/vigia-preco',
+    repoUrl: 'https://github.com/ferreira-guhh/vigilante-dashboard',
     highlight: 'Automação + IA',
     color: 'teal',
     metrics: ['Alertas em tempo real', 'Histórico de preços', 'Multi-produto'],
@@ -82,7 +82,66 @@ export const projects = [
     repoUrl: 'https://github.com/ferreira-guhh/life-os',
     highlight: 'Produtividade + Visualização',
     color: 'pink',
+    status: 'maintenance', // ⚠️ TAG DE MANUTENÇÃO ADICIONADA
     metrics: ['Gestão de tarefas', 'Metas e hábitos', 'Visualização de progresso'],
+  },
+]
+
+// ─── Projetos extras (aparecem ao clicar "Ver mais") ───
+export const extraProjects = [
+  {
+    id: 5,
+    title: 'Clone do Notion',
+    subtitle: 'UI + integração de API',
+    description:
+      'Recriação do aplicativo Notion, focando na interface e integração com a API oficial. Permite criar, editar e organizar notas em um layout flexível.',
+    tags: ['React', 'Notion API', 'OAuth', 'Tailwind CSS'],
+    liveUrl: 'https://clone-notion-nine.vercel.app',
+    repoUrl: 'https://github.com/ferreira-guhh/clone-notion',
+    highlight: 'API + OAuth',
+    color: 'teal',
+    status: 'maintenance', // ⚠️ TAG DE MANUTENÇÃO ADICIONADA
+  },
+  {
+    id: 6,
+    title: 'Game-Vault',
+    subtitle: 'Catálogo de jogos',
+    description:
+      'Aplicação que consome a RAWG Games API para exibir um catálogo de jogos. Permite filtrar por gênero, plataforma e popularidade, além de mostrar detalhes de cada jogo.',
+    tags: ['React', 'RAWG API', 'Axios', 'Tailwind CSS'],
+    liveUrl: 'https://www.linkedin.com/posts/gustavo-ferreira-alexandrino_reactjs-frontend-javascript-ugcPost-7405460161336897538-mLbG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE20EjgB01fVD0O4Y8GBatPAdDWkNi6FPOE',
+    repoUrl: 'https://github.com/ferreira-guhh/game-vault',
+    highlight: 'API + Filtragem',
+    color: 'violet',
+  },
+  {
+    id: 7,
+    title: 'Pyflix',
+    subtitle: 'Catalogo de filmes',
+    description:
+      'Aplicação que consome a API do The Movie Database (TMDb) para exibir um catálogo de filmes. Permite filtrar por gênero, ano e popularidade, além de mostrar detalhes de cada filme.',
+    tags: ['Python', 'Flask', 'TMDb API', 'SQLite'],
+    liveUrl: 'https://www.linkedin.com/posts/gustavo-ferreira-alexandrino_python-react-fullstack-ugcPost-7405724218136539137-AB_i?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE20EjgB01fVD0O4Y8GBatPAdDWkNi6FPOE',
+    repoUrl: 'https://github.com/ferreira-guhh/pyflix',
+    highlight: 'API + Filtragem',
+    color: 'blue',
+  },
+  {
+    id: 8,
+    title: 'Portal de Jogos',
+    subtitle: 'Diversão interativa',
+    description:
+      'Coleção de jogos clássicos desenvolvidos para explorar lógica de programação, algoritmos e animações fluidas no front-end.',
+    problem:
+      'Explorar lógica de jogo, algoritmos de IA simples e animações interativas com React puro.',
+    tags: ['React', 'Framer Motion', 'LocalStorage', 'Tailwind CSS'],
+    featured: false,
+    liveUrl: '#',
+    repoUrl: 'https://github.com/ferreira-guhh/portal-de-jogos',
+    highlight: 'IA + Animações',
+    color: 'pink',
+    status: 'maintenance', // ⚠️ TAG DE MANUTENÇÃO ADICIONADA
+    metrics: ['IA no Jogo da Velha', 'Ranking local', 'Menu unificado'],
   },
 ]
 
@@ -111,66 +170,9 @@ export const skills = {
   ],
 }
 
-// ─── Projetos extras (aparecem ao clicar "Ver mais") ───
-export const extraProjects = [
-  {
-    id: 5,
-    title: 'Clone do notion',
-    subtitle: 'UI + integração de API',
-    description:
-      'Recriação do aplicativo notion, focando na interface e integração com a API oficial. Permite criar, editar e organizar notas em um layout flexível.',
-    tags: ['React', 'Notion API', 'OAuth', 'Tailwind CSS'],
-    liveUrl: 'https://clone-notion-nine.vercel.app',
-    repoUrl: 'https://github.com/ferreira-guhh/clone-notion',
-    highlight: 'API + OAuth',
-    color: 'teal',
-  },
-  {
-  id: 6,
-    title: 'game-vault',
-    subtitle: 'Catálogo de jogos',
-    description:
-      'Aplicação que consome a RAWG Games API para exibir um catálogo de jogos. Permite filtrar por gênero, plataforma e popularidade, além de mostrar detalhes de cada jogo.',
-    tags: ['React', 'RAWG API', 'Axios', 'Tailwind CSS'],
-    liveUrl: 'https://www.linkedin.com/posts/gustavo-ferreira-alexandrino_reactjs-frontend-javascript-ugcPost-7405460161336897538-mLbG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE20EjgB01fVD0O4Y8GBatPAdDWkNi6FPOE',
-    repoUrl: 'https://github.com/ferreira-guhh/game-vault',
-    highlight: 'API + Filtragem',
-    color: 'violet',
-  },
-  {
-    id: 7,
-    title: 'Pyflix',
-    subtitle: 'Catalogo de filmes',
-    description:
-      'Aplicação que consome a API do The Movie Database (TMDb) para exibir um catálogo de filmes. Permite filtrar por gênero, ano e popularidade, além de mostrar detalhes de cada filme.',
-    tags: ['Python', 'Flask', 'TMDb API', 'SQLite'],
-    liveUrl: 'https://www.linkedin.com/posts/gustavo-ferreira-alexandrino_python-react-fullstack-ugcPost-7405724218136539137-AB_i?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE20EjgB01fVD0O4Y8GBatPAdDWkNi6FPOE',
-    repoUrl: 'https://github.com/ferreira-guhh/pyflix',
-    highlight: 'API + Filtragem',
-    color: 'blue',
-  },
-  {
-    id: 8,
-    title: 'Portal de Jogos',
-    subtitle: 'Diversão interativa',
-    description:
-      'Diversão interativa. Coleção de jogos clássicos (como Jogo da Velha com IA simples) focados em interatividade. Ranking local entre jogadores. (Em Desenvolvimento, Sem lançamento previsto)',
-    problem:
-      'Explorar lógica de jogo, algoritmos de IA simples e animações interativas com React puro.',
-    tags: ['React', 'Framer Motion', 'LocalStorage', 'Tailwind CSS'],
-    featured: false,
-    liveUrl: 'https://games.seusite.com',
-    repoUrl: 'https://github.com/ferreira-guhh/portal-de-jogos',
-    highlight: 'IA + Animações',
-    color: 'pink',
-    metrics: ['IA no Jogo da Velha', 'Ranking local', '4 jogos',],
-  },
-
-]
-
 export const dashboardStats = [
   { label: 'Projetos Concluídos', value: 12, suffix: '+',   icon: '⬡', color: 'electric' },
   { label: 'Tecnologias',         value: 15, suffix: '+',   icon: '⬡', color: 'violet'   },
-  { label: 'Horas de Estudo',     value: 680, suffix: 'h',  icon: '⬡', color: 'teal'     },
-  { label: 'Commits no GitHub',   value: 300, suffix: '+',  icon: '⬡', color: 'pink'     },
+  { label: 'Horas de Estudo',     value: 680, suffix: 'h',  icon: '⬡', color: 'teal'      },
+  { label: 'Commits no GitHub',   value: 300, suffix: '+',  icon: '⬡', color: 'pink'      },
 ]
