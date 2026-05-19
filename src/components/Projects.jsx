@@ -53,7 +53,7 @@ function FeaturedCard({ project }) {
           <h3 className="font-display text-3xl font-bold text-white mb-3">{project.title}</h3>
           <p className="text-white/60 leading-relaxed mb-5">{project.description}</p>
           <div className="mb-6 p-4 rounded-lg bg-white/[0.03] border border-white/[0.06]">
-            <p className="text-xs font-mono text-white/30 mb-1">foco arquitetural</p>
+            <p className="font-mono text-white/30 mb-1" style={{ fontSize: '10px' }}>foco arquitetural</p>
             <p className="text-sm text-white/60">{project.problem}</p>
           </div>
           <div className="flex flex-wrap gap-2 mb-6">
@@ -71,7 +71,7 @@ function FeaturedCard({ project }) {
           </div>
         </div>
         <div>
-          <p className="text-xs font-mono text-white/25 mb-4">resultados</p>
+          <p className="font-mono text-white/25 mb-4" style={{ fontSize: '10px' }}>resultados</p>
           {project.metrics.map((metric, i) => (
             <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.025]
                                     border border-white/[0.06] hover:border-electric-500/20
@@ -85,7 +85,7 @@ function FeaturedCard({ project }) {
             <div className="stat-number mb-2 flex justify-center">
               <Settings className="block" size={28} aria-hidden="true" />
             </div>
-            <p className="text-xs font-mono text-white/40 mt-1">Operações completas e rotas seguras</p>
+            <p className="font-mono text-white/40 mt-1" style={{ fontSize: '10px' }}>Operações completas e rotas seguras</p>
           </div>
         </div>
       </div>
@@ -95,6 +95,8 @@ function FeaturedCard({ project }) {
 
 function ProjectCard({ project, animDelay = 0 }) {
   const colors = colorMap[project.color] || colorMap.electric
+  const isMaintenance = project.status === 'maintenance'
+
   return (
     <div
       className="project-card card-glass rounded-2xl p-6 flex flex-col h-full
@@ -112,15 +114,26 @@ function ProjectCard({ project, animDelay = 0 }) {
                           transition-colors text-white/40 hover:text-white">
               <GithubIcon size={13} />
             </a>
-            <a href={project.liveUrl} target="_blank" rel="noreferrer"
-               className="p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.09]
-                          transition-colors text-white/40 hover:text-white">
+            <a href={isMaintenance ? '#' : project.liveUrl} 
+               target={isMaintenance ? '_self' : '_blank'} 
+               rel="noreferrer"
+               onClick={(e) => isMaintenance && e.preventDefault()}
+               className={`p-2 rounded-lg bg-white/[0.04] transition-colors text-white/40 
+                          ${isMaintenance ? 'cursor-not-allowed opacity-30' : 'hover:bg-white/[0.09] hover:text-white'}`}>
               <ExternalIcon size={13} />
             </a>
           </div>
         </div>
         <h3 className="font-display text-xl font-bold text-white mb-1">{project.title}</h3>
-        <p className="text-xs font-mono text-white/25 mb-3">{project.subtitle}</p>
+        <p className="font-mono text-white/25 mb-3" style={{ fontSize: '10px' }}>{project.subtitle}</p>
+        
+        {/* 🟡 AVISO NEON DE MANUTENÇÃO */}
+        {isMaintenance && (
+          <div className="mb-3 px-3 py-1.5 text-xs font-mono font-semibold rounded-lg text-yellow-400 bg-yellow-400/5 border border-yellow-400/20 shadow-[0_0_12px_rgba(250,204,21,0.05)] animate-pulse flex items-center gap-2">
+            <span>🛠️</span> Em Manutenção Técnica
+          </div>
+        )}
+
         <p className="text-white/55 text-sm leading-relaxed mb-4 flex-grow">{project.description}</p>
         {project.problem && (
           <div className="mb-4 px-3 py-2.5 rounded-lg bg-white/[0.025] border-l-2"
@@ -139,6 +152,8 @@ function ProjectCard({ project, animDelay = 0 }) {
 }
 
 function ExtraProjectCard({ project, index, visible }) {
+  const isMaintenance = project.status === 'maintenance'
+
   return (
     <div
       className="project-card card-glass rounded-2xl p-6 flex flex-col h-full
@@ -164,15 +179,26 @@ function ExtraProjectCard({ project, index, visible }) {
                               transition-colors text-white/40 hover:text-white">
                   <GithubIcon size={13} />
                 </a>
-                <a href={project.liveUrl} target="_blank" rel="noreferrer"
-                   className="p-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.09]
-                              transition-colors text-white/40 hover:text-white">
+                <a href={isMaintenance ? '#' : project.liveUrl} 
+                   target={isMaintenance ? '_self' : '_blank'} 
+                   rel="noreferrer"
+                   onClick={(e) => isMaintenance && e.preventDefault()}
+                   className={`p-2 rounded-lg bg-white/[0.04] transition-colors text-white/40 
+                              ${isMaintenance ? 'cursor-not-allowed opacity-30' : 'hover:bg-white/[0.09] hover:text-white'}`}>
                   <ExternalIcon size={13} />
                 </a>
               </div>
             </div>
             <h3 className="font-display text-xl font-bold text-white mb-1">{project.title}</h3>
-            <p className="text-xs font-mono text-white/25 mb-3">{project.subtitle}</p>
+            <p className="font-mono text-white/25 mb-3" style={{ fontSize: '10px' }}>{project.subtitle}</p>
+            
+            {/* 🟡 AVISO NEON DE MANUTENÇÃO (EXTRA CARDS) */}
+            {isMaintenance && (
+              <div className="mb-3 px-3 py-1.5 text-xs font-mono font-semibold rounded-lg text-yellow-400 bg-yellow-400/5 border border-yellow-400/20 shadow-[0_0_12px_rgba(250,204,21,0.05)] animate-pulse flex items-center gap-2">
+                <span>🛠️</span> Em Manutenção
+              </div>
+            )}
+
             <p className="text-white/55 text-sm leading-relaxed mb-4 flex-grow">{project.description}</p>
             <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
               {project.tags.map((tag) => (
@@ -198,7 +224,6 @@ export default function Projects() {
       }, 80)
     } else {
       setExpanded(false)
-      // scroll back up to the button area
       document.getElementById('projetos')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
@@ -236,16 +261,14 @@ export default function Projects() {
 
         {/* ── Divisor + botão expandir ── */}
         <div className="flex flex-col items-center gap-5 mt-4">
-          {/* Linha com contador */}
           <div className="flex items-center gap-4 w-full max-w-md">
             <div className="flex-1 h-px bg-gradient-to-r from-transparent to-white/[0.08]" />
-            <span className="text-xs font-mono text-white/20 whitespace-nowrap px-2">
+            <span className="font-mono text-white/20 whitespace-nowrap px-2" style={{ fontSize: '10px' }}>
               {expanded ? 'mostrando todos os projetos' : `+ ${extraProjects.length} projetos disponíveis`}
             </span>
             <div className="flex-1 h-px bg-gradient-to-l from-transparent to-white/[0.08]" />
           </div>
 
-          {/* Botão */}
           <button
             onClick={handleToggle}
             className="group relative flex items-center gap-3 px-7 py-3.5 rounded-xl
@@ -254,12 +277,10 @@ export default function Projects() {
                        text-white/55 hover:text-electric-400
                        transition-all duration-300 overflow-hidden"
           >
-            {/* Glow hover */}
             <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100
                              bg-gradient-to-r from-electric-500/5 to-violet-500/5
                              transition-opacity duration-300" />
 
-            {/* Badge com contagem */}
             <span className="relative z-10 flex items-center justify-center
                              w-5 h-5 rounded-full text-xs font-mono
                              bg-white/[0.06] border border-white/[0.1]
@@ -272,7 +293,6 @@ export default function Projects() {
               {expanded ? 'Recolher projetos' : `Ver mais ${extraProjects.length} projetos`}
             </span>
 
-            {/* Seta animada */}
             <svg
               className={`relative z-10 transition-transform duration-300 ease-in-out
                           ${expanded ? 'rotate-180' : 'group-hover:translate-y-0.5'}`}
@@ -288,23 +308,21 @@ export default function Projects() {
         <div
           ref={extraRef}
           style={{
-            maxHeight:  expanded ? `${extraProjects.length * 600}px` : '0px',
-            opacity:    expanded ? 1 : 0,
-            overflow:   'hidden',
+            maxHeight:    expanded ? `${extraProjects.length * 600}px` : '0px',
+            opacity:      expanded ? 1 : 0,
+            overflow:     'hidden',
             transition: 'max-height 0.55s cubic-bezier(0.16,1,0.3,1), opacity 0.4s ease',
           }}
         >
-          {/* Cabeçalho da seção extra */}
           <div className="flex items-center gap-4 mt-12 mb-8">
             <div className="h-px flex-1 bg-white/[0.06]" />
-            <span className="text-xs font-mono text-white/25 px-4 py-1.5 rounded-full
-                             border border-white/[0.06] bg-white/[0.02]">
+            <span className="font-mono text-white/25 px-4 py-1.5 rounded-full
+                             border border-white/[0.06] bg-white/[0.02]" style={{ fontSize: '10px' }}>
               outros projetos
             </span>
             <div className="h-px flex-1 bg-white/[0.06]" />
           </div>
 
-          {/* Grid extras — 2 colunas no mobile, 4 no desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {extraProjects.map((project, i) => (
               <ExtraProjectCard
@@ -316,14 +334,14 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* Link GitHub ao final */}
           <div className="mt-10 pb-2 text-center">
             <a
               href="https://github.com/ferreira-guhh"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-xs font-mono text-white/25
+              className="inline-flex items-center gap-2 font-mono text-white/25
                          hover:text-electric-400 transition-colors group"
+              style={{ fontSize: '10px' }}
             >
               <GithubIcon size={12} />
               ver todos os repositórios no GitHub
