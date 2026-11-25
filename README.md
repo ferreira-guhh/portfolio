@@ -21,8 +21,11 @@ Edite o arquivo `src/data/portfolio.js`:
 
 - **`profile`** — seu nome, bio, links do GitHub/LinkedIn, email
 - **`projects`** — seus projetos (título, descrição, links, tecnologias)
-- **`skills`** — suas habilidades e nível (0–100)
-- **`dashboardStats`** — números do seu dashboard
+- **`skills`** — suas habilidades e nível (`'dia a dia'`, `'confortável'` ou `'estudando'`)
+- **`timeline`** — linha do tempo exibida no Dashboard
+- **`githubHiddenRepos`** — repositórios que não devem aparecer na atividade recente
+
+Os números e a atividade do Dashboard são calculados automaticamente (a partir dos projetos e da API pública do GitHub).
 
 ## 📦 Build para produção
 
@@ -56,6 +59,8 @@ vercel --prod
 ```
 portfolio/
 ├── public/
+│   ├── favicon.svg
+│   └── og-image.png        ← imagem de preview ao compartilhar o link
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.jsx
@@ -65,6 +70,7 @@ portfolio/
 │   │   ├── Skills.jsx
 │   │   ├── Dashboard.jsx
 │   │   ├── Contact.jsx
+│   │   ├── Icons.jsx
 │   │   └── Footer.jsx
 │   ├── data/
 │   │   └── portfolio.js   ← EDITE AQUI
@@ -85,6 +91,5 @@ portfolio/
 - React 18
 - Vite 5
 - Tailwind CSS 3
-- Framer Motion (opcional, instalado)
 - Lucide React (ícones)
 - Syne + DM Sans + JetBrains Mono (Google Fonts)

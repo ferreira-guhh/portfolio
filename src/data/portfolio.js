@@ -4,9 +4,10 @@
 
 export const profile = {
   name: 'Gustavo Ferreira Alexandrino',
+  shortName: 'Gustavo Ferreira', // usado no destaque do topo (fica melhor no celular)
   role: 'Desenvolvedor Frontend',
   tagline: 'Transformo ideias em interfaces que as pessoas realmente usam.',
-  bio: `Sou estudante do 3º semestre de Ciência da Computação e desenvolvedor frontend focado no ecossistema React. Mais do que escrever código, gosto de criar aplicações robustas que entregam uma experiência fluida e resolvem problemas complexos, unindo estética e performance.
+  bio: `Sou estudante de Ciência da Computação (concluindo o 4º semestre) e desenvolvedor frontend focado no ecossistema React. Mais do que escrever código, gosto de criar aplicações robustas que entregam uma experiência fluida e resolvem problemas complexos, unindo estética e performance.
 
 Recentemente, arquitetei e desenvolvi de ponta a ponta uma plataforma completa de e-commerce. O projeto engloba desde a jornada do usuário no catálogo e carrinho até um painel administrativo completo para gestão, validando minha capacidade de lidar com arquiteturas reais. Além disso, possuo vivência prática colaborando na estruturação de sistemas SaaS em equipe.
 
@@ -25,16 +26,34 @@ export const projects = [
     title: 'StoreCore - Plataforma E-commerce B2C',
     subtitle: 'Arquitetura Full Stack',
     description:
-      'Plataforma completa de e-commerce construída do zero para demonstrar o fluxo integral de um negócio online. O projeto contempla desde a experiência de navegação, busca e carrinho para o usuário final, até a integração fluida com um back-end próprio',
+      'Plataforma completa de e-commerce que nasceu de um site real feito para uma loja de família e foi adaptada, com dados genéricos, para demonstração. Contempla desde a navegação, busca e carrinho do usuário final até a integração com um back-end próprio e um painel administrativo.',
     problem:
-      'O desafio principal foi projetar uma arquitetura capaz de gerenciar múltiplos estados complexos (sessão de usuário, persistência de carrinho) e garantir o consumo eficiente de uma API RESTful construída in Node.js com banco de dados NoSQL.',
+      'O desafio principal foi projetar uma arquitetura capaz de gerenciar múltiplos estados complexos (sessão de usuário, persistência de carrinho) e garantir o consumo eficiente de uma API RESTful construída em Node.js com banco de dados PostgreSQL.',
     tags: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'REST API'],
     featured: true,
     liveUrl: 'https://storecore-ecommerce.vercel.app/',
     repoUrl: 'https://github.com/ferreira-guhh/storecore-ecommerce',
     highlight: 'Sistemas Complexos End-to-End',
     color: 'electric',
-    metrics: ['Fluxo completo de Checkout', 'Gerenciamento de estado global', 'Painel administrativo integrado', '💡 Dica para Avaliadores: Acesse a visão de gestão! No rodapé do e-commerce, clique no ícone de cadeado (🔓) e use o login de Recrutador para explorar o Painel Administrativo.'],
+    metrics: ['Fluxo completo de Checkout', 'Gerenciamento de estado global', 'Painel administrativo integrado'],
+    recruiterTip: 'No rodapé do e-commerce, clique no ícone de cadeado (🔓) e use o login de Recrutador para explorar o Painel Administrativo.',
+  },
+  {
+    id: 9,
+    title: 'Financeiro',
+    subtitle: 'Gestão financeira pessoal full stack',
+    description:
+      'Gerenciador financeiro completo: livro-caixa, contas e cartões, parcelamentos, contas fixas, metas, investimentos, relatórios, previsão de caixa, simulador "E se?" e importação de extratos bancários.',
+    problem:
+      'Modelar regras financeiras reais sem erros de arredondamento: valores em NUMERIC (nunca float), constraints no banco e fatura sempre calculada a partir dos lançamentos.',
+    tags: ['React', 'TypeScript', 'Fastify', 'PostgreSQL', 'Drizzle ORM', 'Zod', 'TanStack Query', 'Recharts'],
+    featured: false,
+    liveUrl: '',
+    repoUrl: 'https://github.com/ferreira-guhh/financeiro',
+    highlight: 'Full Stack + TypeScript',
+    color: 'electric',
+    status: 'development',
+    metrics: ['82 testes automatizados', 'Importação CSV/OFX/Excel', 'Simulador "E se?"'],
   },
   {
     id: 2,
@@ -55,19 +74,23 @@ export const projects = [
   {
     id: 3,
     title: 'Vigia de Preço',
-    subtitle: 'Automação inteligente',
+    subtitle: 'Dashboard de monitoramento',
     description:
-      'Automação inteligente. Ferramenta que monitora preços de produtos online e notifica o usuário sobre quedas de valor. Scraping automatizado com histórico visual de preços.',
+      'Aplicação web em Python que monitora preços de produtos do Mercado Livre via web scraping, cotações de criptomoedas e vagas de tecnologia em tempo real, com alerta quando um preço cai.',
     problem:
-      'Economizar tempo e dinheiro eliminando a necessidade de verificar preços manualmente todos os dias.',
-    tags: ['React', 'Node.js', 'Cheerio', 'Chart.js', 'Cron Jobs'],
+      'Evitar a checagem manual diária de preços e lidar com limites de requisição das APIs usando requisições em lote.',
+    tags: ['Python', 'Flask', 'BeautifulSoup', 'Requests', 'CoinGecko API', 'Bootstrap'],
     featured: false,
     liveUrl: 'https://www.linkedin.com/posts/gustavo-ferreira-alexandrino_python-flask-automation-activity-7405524969369030656-CN1b?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE20EjgB01fVD0O4Y8GBatPAdDWkNi6FPOE',
     repoUrl: 'https://github.com/ferreira-guhh/vigilante-dashboard',
-    highlight: 'Automação + IA',
+    highlight: 'Automação + Scraping',
     color: 'teal',
-    metrics: ['Alertas em tempo real', 'Histórico de preços', 'Multi-produto'],
+    metrics: ['Alertas de queda de preço', 'Cripto e vagas em tempo real', 'Multi-produto'],
   },
+]
+
+// ─── Projetos extras (aparecem ao clicar "Ver mais") ───
+export const extraProjects = [
   {
     id: 4,
     title: 'Life-OS',
@@ -82,25 +105,8 @@ export const projects = [
     repoUrl: 'https://github.com/ferreira-guhh/life-os',
     highlight: 'Produtividade + Visualização',
     color: 'pink',
-    status: 'maintenance', // ⚠️ TAG DE MANUTENÇÃO ADICIONADA
+    status: 'maintenance',
     metrics: ['Gestão de tarefas', 'Metas e hábitos', 'Visualização de progresso'],
-  },
-]
-
-// ─── Projetos extras (aparecem ao clicar "Ver mais") ───
-export const extraProjects = [
-  {
-    id: 5,
-    title: 'Clone do Notion',
-    subtitle: 'UI + integração de API',
-    description:
-      'Recriação do aplicativo Notion, focando na interface e integração com a API oficial. Permite criar, editar e organizar notas em um layout flexível.',
-    tags: ['React', 'Notion API', 'OAuth', 'Tailwind CSS'],
-    liveUrl: 'https://clone-notion-nine.vercel.app',
-    repoUrl: 'https://github.com/ferreira-guhh/clone-notion',
-    highlight: 'API + OAuth',
-    color: 'teal',
-    status: 'maintenance', // ⚠️ TAG DE MANUTENÇÃO ADICIONADA
   },
   {
     id: 6,
@@ -117,7 +123,7 @@ export const extraProjects = [
   {
     id: 7,
     title: 'Pyflix',
-    subtitle: 'Catalogo de filmes',
+    subtitle: 'Catálogo de filmes',
     description:
       'Aplicação que consome a API do The Movie Database (TMDb) para exibir um catálogo de filmes. Permite filtrar por gênero, ano e popularidade, além de mostrar detalhes de cada filme.',
     tags: ['Python', 'Flask', 'TMDb API', 'SQLite'],
@@ -140,39 +146,63 @@ export const extraProjects = [
     repoUrl: 'https://github.com/ferreira-guhh/portal-de-jogos',
     highlight: 'IA + Animações',
     color: 'pink',
-    status: 'maintenance', // ⚠️ TAG DE MANUTENÇÃO ADICIONADA
+    status: 'maintenance',
     metrics: ['IA no Jogo da Velha', 'Ranking local', 'Menu unificado'],
   },
 ]
 
+// Níveis: 'dia a dia' (uso com frequência) · 'confortável' (já usei em projeto) · 'estudando'
+export const skillLevels = {
+  'dia a dia':   { label: 'uso no dia a dia', dots: 3 },
+  'confortável': { label: 'já usei em projetos', dots: 2 },
+  'estudando':   { label: 'estudando', dots: 1 },
+}
+
 export const skills = {
   frontend: [
-    { name: 'React',        level: 80 },
-    { name: 'TypeScript',   level: 65 },
-    { name: 'Tailwind CSS', level: 80 },
-    { name: 'Vite',         level: 75 },
-    { name: 'Framer Motion',level: 75 },
-    { name: 'React Router', level: 65 },
+    { name: 'React',         level: 'dia a dia' },
+    { name: 'Tailwind CSS',  level: 'dia a dia' },
+    { name: 'Vite',          level: 'dia a dia' },
+    { name: 'Framer Motion', level: 'confortável' },
+    { name: 'React Router',  level: 'confortável' },
+    { name: 'TypeScript',    level: 'confortável' },
   ],
   backend: [
-    { name: 'Node.js',   level: 75 },
-    { name: 'Express',   level: 60 },
-    { name: 'MongoDB',   level: 50 },
-    { name: 'REST APIs', level: 80 },
-    { name: 'Firebase', level: 75 }
+    { name: 'REST APIs', level: 'dia a dia' },
+    { name: 'Node.js',   level: 'confortável' },
+    { name: 'Express',   level: 'confortável' },
+    { name: 'PostgreSQL', level: 'confortável' },
+    { name: 'Python',    level: 'confortável' },
+    { name: 'Firebase',  level: 'confortável' },
+    { name: 'MongoDB',   level: 'estudando' },
   ],
   tools: [
-    { name: 'Git/GitHub',  level: 80 },
-    { name: 'Figma',       level: 80 },
-    { name: 'VS Code',     level: 80 },
-    { name: 'Vercel',      level: 80 },
-    { name: 'Postman',     level: 60 },
+    { name: 'Git/GitHub', level: 'dia a dia' },
+    { name: 'VS Code',    level: 'dia a dia' },
+    { name: 'Vercel',     level: 'dia a dia' },
+    { name: 'Figma',      level: 'confortável' },
+    { name: 'Postman',    level: 'confortável' },
   ],
 }
 
-export const dashboardStats = [
-  { label: 'Projetos Concluídos', value: 12, suffix: '+',   icon: '⬡', color: 'electric' },
-  { label: 'Tecnologias',         value: 15, suffix: '+',   icon: '⬡', color: 'violet'   },
-  { label: 'Horas de Estudo',     value: 680, suffix: 'h',  icon: '⬡', color: 'teal'      },
-  { label: 'Commits no GitHub',   value: 300, suffix: '+',  icon: '⬡', color: 'pink'      },
+// Linha do tempo (Dashboard) — atualize conforme for evoluindo
+export const timeline = [
+  { date: '2026 Q1', event: 'Entrega do sistema para o Bazar Ana Paula e avanços práticos no 3º semestre de Ciência da Computação na UNIP.', color: '#00aed4' },
+  { date: '2025 Q4', event: 'Desenvolvimento do catálogo do Agromoreli e arquitetura de um e-commerce funcional com carrinho.', color: '#7c5cfc' },
+  { date: '2025 Q3', event: 'Construção do Vigia de Preço com scraping automatizado e integrações de API.', color: '#14b8a6' },
+  { date: '2025 Q2', event: 'Criação do Portal de Jogos com IA local (Jogo da Velha) para solidificar lógica em JavaScript puro.', color: '#ec4899' },
+  { date: '2025 Q1', event: 'Primeiros projetos estruturais com React e Tailwind, unindo estética e responsividade.', color: '#64748b' },
+]
+
+// Usuário do GitHub para os dados reais do Dashboard
+export const githubUser = 'ferreira-guhh'
+
+// Repositórios que NÃO aparecem na "atividade recente" do Dashboard
+// (trabalhos de outras matérias, etc.). Edite à vontade.
+export const githubHiddenRepos = [
+  'portfolio',
+  'homem-sociedade',
+  'bioquimica',
+  'microbiologia',
+  'trabaldo-mat.finaly',
 ]

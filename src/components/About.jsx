@@ -25,11 +25,11 @@ export default function About() {
         {/* Section header */}
         <div className="reveal mb-16">
           <p className="font-mono text-sm text-electric-400 mb-3">
-            <span className="text-white/20">01. </span>sobre mim
+            <span className="text-white/40">01. </span>sobre mim
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
             Quem está por trás
-            <span className="block text-white/30">do código</span>
+            <span className="block text-white/40">do código</span>
           </h2>
         </div>
 
@@ -70,7 +70,7 @@ export default function About() {
                 </span>
                 <div>
                   <h3 className="font-display font-semibold text-white mb-1">{title}</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{desc}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
                 </div>
               </div>
             ))}
@@ -78,9 +78,9 @@ export default function About() {
             {/* Currently learning */}
             <div className="mt-6 p-4 rounded-xl border border-dashed border-white/10
                             bg-gradient-to-br from-violet-500/5 to-transparent">
-              <p className="text-xs font-mono text-white/30 mb-2">atualmente estudando</p>
+              <p className="text-xs font-mono text-white/50 mb-2">atualmente estudando</p>
               <div className="flex flex-wrap gap-2">
-                {['TypeScript avançado', 'PostgreSQL', 'Docker', 'Next.js'].map((item) => (
+                {['TypeScript avançado', 'Docker', 'Next.js', 'Testes automatizados'].map((item) => (
                   <span key={item} className="text-xs font-mono text-violet-400/80
                                               bg-violet-500/10 border border-violet-500/20
                                               px-3 py-1 rounded-full">
