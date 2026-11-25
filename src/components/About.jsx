@@ -80,7 +80,7 @@ export default function About() {
                             bg-gradient-to-br from-violet-500/5 to-transparent">
               <p className="text-xs font-mono text-white/50 mb-2">atualmente estudando</p>
               <div className="flex flex-wrap gap-2">
-                {['TypeScript avançado', 'PostgreSQL', 'Docker', 'Next.js'].map((item) => (
+                {['TypeScript avançado', 'Docker', 'Next.js', 'Testes automatizados'].map((item) => (
                   <span key={item} className="text-xs font-mono text-violet-400/80
                                               bg-violet-500/10 border border-violet-500/20
                                               px-3 py-1 rounded-full">

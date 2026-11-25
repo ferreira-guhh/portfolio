@@ -89,7 +89,8 @@ export default function Skills() {
             {[
               'HTML5', 'CSS3', 'JavaScript ES2024', 'Axios', 'Zod',
               'React Hook Form', 'Zustand', 'Chart.js', 'Cheerio',
-              'JWT', 'bcrypt', 'Mongoose', 'dotenv',
+              'JWT', 'bcrypt', 'Mongoose', 'dotenv', 'Fastify', 'Drizzle ORM',
+              'TanStack Query', 'Recharts', 'Flask', 'BeautifulSoup', 'Vitest',
             ].map((tech) => (
               <span
                 key={tech}

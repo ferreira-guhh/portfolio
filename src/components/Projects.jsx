@@ -39,6 +39,13 @@ function getLive(project) {
   return { url, kind: 'site', label: 'Ver projeto ao vivo' }
 }
 
+const DevelopmentBadge = () => (
+  <p className="mb-3 inline-flex items-center gap-2 self-start px-2.5 py-1 text-[11px] font-mono rounded-md
+                text-electric-300 bg-electric-500/5 border border-electric-500/25">
+    <span className="w-1.5 h-1.5 rounded-full bg-electric-400" aria-hidden="true" /> em desenvolvimento · já utilizável
+  </p>
+)
+
 const MaintenanceBadge = () => (
   <p className="mb-3 inline-flex items-center gap-2 self-start px-2.5 py-1 text-[11px] font-mono rounded-md
                 text-yellow-300/90 bg-yellow-400/5 border border-yellow-400/20">
@@ -165,6 +172,7 @@ function ProjectCard({ project, style }) {
         <p className="font-mono text-[11px] text-white/45 mb-3">{project.subtitle}</p>
 
         {isMaintenance && <MaintenanceBadge />}
+        {project.status === 'development' && <DevelopmentBadge />}
 
         <p className="text-white/60 text-sm leading-relaxed mb-4 flex-grow">{project.description}</p>
 

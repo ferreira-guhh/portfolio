@@ -7,7 +7,7 @@ export const profile = {
   shortName: 'Gustavo Ferreira', // usado no destaque do topo (fica melhor no celular)
   role: 'Desenvolvedor Frontend',
   tagline: 'Transformo ideias em interfaces que as pessoas realmente usam.',
-  bio: `Sou estudante do 3º semestre de Ciência da Computação e desenvolvedor frontend focado no ecossistema React. Mais do que escrever código, gosto de criar aplicações robustas que entregam uma experiência fluida e resolvem problemas complexos, unindo estética e performance.
+  bio: `Sou estudante de Ciência da Computação (concluindo o 4º semestre) e desenvolvedor frontend focado no ecossistema React. Mais do que escrever código, gosto de criar aplicações robustas que entregam uma experiência fluida e resolvem problemas complexos, unindo estética e performance.
 
 Recentemente, arquitetei e desenvolvi de ponta a ponta uma plataforma completa de e-commerce. O projeto engloba desde a jornada do usuário no catálogo e carrinho até um painel administrativo completo para gestão, validando minha capacidade de lidar com arquiteturas reais. Além disso, possuo vivência prática colaborando na estruturação de sistemas SaaS em equipe.
 
@@ -28,7 +28,7 @@ export const projects = [
     description:
       'Plataforma completa de e-commerce construída do zero para demonstrar o fluxo integral de um negócio online. O projeto contempla desde a experiência de navegação, busca e carrinho para o usuário final, até a integração fluida com um back-end próprio',
     problem:
-      'O desafio principal foi projetar uma arquitetura capaz de gerenciar múltiplos estados complexos (sessão de usuário, persistência de carrinho) e garantir o consumo eficiente de uma API RESTful construída em Node.js com banco de dados NoSQL.',
+      'O desafio principal foi projetar uma arquitetura capaz de gerenciar múltiplos estados complexos (sessão de usuário, persistência de carrinho) e garantir o consumo eficiente de uma API RESTful construída em Node.js com banco de dados PostgreSQL.',
     tags: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'REST API'],
     featured: true,
     liveUrl: 'https://storecore-ecommerce.vercel.app/',
@@ -37,6 +37,23 @@ export const projects = [
     color: 'electric',
     metrics: ['Fluxo completo de Checkout', 'Gerenciamento de estado global', 'Painel administrativo integrado'],
     recruiterTip: 'No rodapé do e-commerce, clique no ícone de cadeado (🔓) e use o login de Recrutador para explorar o Painel Administrativo.',
+  },
+  {
+    id: 9,
+    title: 'Financeiro',
+    subtitle: 'Gestão financeira pessoal full stack',
+    description:
+      'Gerenciador financeiro completo: livro-caixa, contas e cartões, parcelamentos, contas fixas, metas, investimentos, relatórios, previsão de caixa, simulador "E se?" e importação de extratos bancários.',
+    problem:
+      'Modelar regras financeiras reais sem erros de arredondamento: valores em NUMERIC (nunca float), constraints no banco e fatura sempre calculada a partir dos lançamentos.',
+    tags: ['React', 'TypeScript', 'Fastify', 'PostgreSQL', 'Drizzle ORM', 'Zod', 'TanStack Query', 'Recharts'],
+    featured: false,
+    liveUrl: '',
+    repoUrl: 'https://github.com/ferreira-guhh/financeiro',
+    highlight: 'Full Stack + TypeScript',
+    color: 'electric',
+    status: 'development',
+    metrics: ['82 testes automatizados', 'Importação CSV/OFX/Excel', 'Simulador "E se?"'],
   },
   {
     id: 2,
@@ -57,19 +74,23 @@ export const projects = [
   {
     id: 3,
     title: 'Vigia de Preço',
-    subtitle: 'Automação inteligente',
+    subtitle: 'Dashboard de monitoramento',
     description:
-      'Automação inteligente. Ferramenta que monitora preços de produtos online e notifica o usuário sobre quedas de valor. Scraping automatizado com histórico visual de preços.',
+      'Aplicação web em Python que monitora preços de produtos do Mercado Livre via web scraping, cotações de criptomoedas e vagas de tecnologia em tempo real, com alerta quando um preço cai.',
     problem:
-      'Economizar tempo e dinheiro eliminando a necessidade de verificar preços manualmente todos os dias.',
-    tags: ['React', 'Node.js', 'Cheerio', 'Chart.js', 'Cron Jobs'],
+      'Evitar a checagem manual diária de preços e lidar com limites de requisição das APIs usando requisições em lote.',
+    tags: ['Python', 'Flask', 'BeautifulSoup', 'Requests', 'CoinGecko API', 'Bootstrap'],
     featured: false,
     liveUrl: 'https://www.linkedin.com/posts/gustavo-ferreira-alexandrino_python-flask-automation-activity-7405524969369030656-CN1b?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE20EjgB01fVD0O4Y8GBatPAdDWkNi6FPOE',
     repoUrl: 'https://github.com/ferreira-guhh/vigilante-dashboard',
-    highlight: 'Automação + IA',
+    highlight: 'Automação + Scraping',
     color: 'teal',
-    metrics: ['Alertas em tempo real', 'Histórico de preços', 'Multi-produto'],
+    metrics: ['Alertas de queda de preço', 'Cripto e vagas em tempo real', 'Multi-produto'],
   },
+]
+
+// ─── Projetos extras (aparecem ao clicar "Ver mais") ───
+export const extraProjects = [
   {
     id: 4,
     title: 'Life-OS',
@@ -84,25 +105,8 @@ export const projects = [
     repoUrl: 'https://github.com/ferreira-guhh/life-os',
     highlight: 'Produtividade + Visualização',
     color: 'pink',
-    status: 'maintenance', // ⚠️ TAG DE MANUTENÇÃO ADICIONADA
+    status: 'maintenance',
     metrics: ['Gestão de tarefas', 'Metas e hábitos', 'Visualização de progresso'],
-  },
-]
-
-// ─── Projetos extras (aparecem ao clicar "Ver mais") ───
-export const extraProjects = [
-  {
-    id: 5,
-    title: 'Clone do Notion',
-    subtitle: 'UI + integração de API',
-    description:
-      'Recriação do aplicativo Notion, focando na interface e integração com a API oficial. Permite criar, editar e organizar notas em um layout flexível.',
-    tags: ['React', 'Notion API', 'OAuth', 'Tailwind CSS'],
-    liveUrl: 'https://clone-notion-nine.vercel.app',
-    repoUrl: 'https://github.com/ferreira-guhh/clone-notion',
-    highlight: 'API + OAuth',
-    color: 'teal',
-    status: 'maintenance', // ⚠️ TAG DE MANUTENÇÃO ADICIONADA
   },
   {
     id: 6,
@@ -119,7 +123,7 @@ export const extraProjects = [
   {
     id: 7,
     title: 'Pyflix',
-    subtitle: 'Catalogo de filmes',
+    subtitle: 'Catálogo de filmes',
     description:
       'Aplicação que consome a API do The Movie Database (TMDb) para exibir um catálogo de filmes. Permite filtrar por gênero, ano e popularidade, além de mostrar detalhes de cada filme.',
     tags: ['Python', 'Flask', 'TMDb API', 'SQLite'],
@@ -142,7 +146,7 @@ export const extraProjects = [
     repoUrl: 'https://github.com/ferreira-guhh/portal-de-jogos',
     highlight: 'IA + Animações',
     color: 'pink',
-    status: 'maintenance', // ⚠️ TAG DE MANUTENÇÃO ADICIONADA
+    status: 'maintenance',
     metrics: ['IA no Jogo da Velha', 'Ranking local', 'Menu unificado'],
   },
 ]
@@ -161,12 +165,14 @@ export const skills = {
     { name: 'Vite',          level: 'dia a dia' },
     { name: 'Framer Motion', level: 'confortável' },
     { name: 'React Router',  level: 'confortável' },
-    { name: 'TypeScript',    level: 'estudando' },
+    { name: 'TypeScript',    level: 'confortável' },
   ],
   backend: [
     { name: 'REST APIs', level: 'dia a dia' },
     { name: 'Node.js',   level: 'confortável' },
     { name: 'Express',   level: 'confortável' },
+    { name: 'PostgreSQL', level: 'confortável' },
+    { name: 'Python',    level: 'confortável' },
     { name: 'Firebase',  level: 'confortável' },
     { name: 'MongoDB',   level: 'estudando' },
   ],
