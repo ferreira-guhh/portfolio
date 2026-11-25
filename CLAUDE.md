@@ -15,7 +15,7 @@ Idioma de trabalho: português. O Gustavo busca vaga de **estágio / dev júnior
 ## Status dos projetos (atualize esta tabela ao terminar cada um)
 | Projeto | Repo | Situação | Pendências |
 |---|---|---|---|
-| StoreCore (destaque) | storecore-ecommerce | no ar | Banco é **PostgreSQL**. Substituiu o antigo site do "Bazar Ana Paula" (loja da mãe do Gustavo). Confirmar se está em uso real pela loja antes de dizer isso no card. |
+| StoreCore (destaque) | storecore-ecommerce | no ar (demonstração) | Banco é **PostgreSQL**. Nasceu do site real feito para o "Bazar Ana Paula" (loja da mãe do Gustavo); os dados da loja foram trocados por genéricos. **Não** está em uso real pela loja: é demo para recrutadores (tem login de recrutador). |
 | Financeiro | financeiro | em desenvolvimento, já utilizável | Sem deploy ainda (`liveUrl` vazio). Tem prints em `docs/screenshots`. |
 | Agromoreli | agromoreli-site | no ar (cliente real) | — |
 | Vigia de Preço | vigilante-dashboard | só vídeo no LinkedIn | Python/Flask. **Não tem IA.** Plano: publicar online e trocar o `liveUrl`. |

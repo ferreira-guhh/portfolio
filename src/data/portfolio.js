@@ -26,7 +26,7 @@ export const projects = [
     title: 'StoreCore - Plataforma E-commerce B2C',
     subtitle: 'Arquitetura Full Stack',
     description:
-      'Plataforma completa de e-commerce construída do zero para demonstrar o fluxo integral de um negócio online. O projeto contempla desde a experiência de navegação, busca e carrinho para o usuário final, até a integração fluida com um back-end próprio',
+      'Plataforma completa de e-commerce que nasceu de um site real feito para uma loja de família e foi adaptada, com dados genéricos, para demonstração. Contempla desde a navegação, busca e carrinho do usuário final até a integração com um back-end próprio e um painel administrativo.',
     problem:
       'O desafio principal foi projetar uma arquitetura capaz de gerenciar múltiplos estados complexos (sessão de usuário, persistência de carrinho) e garantir o consumo eficiente de uma API RESTful construída em Node.js com banco de dados PostgreSQL.',
     tags: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'REST API'],
