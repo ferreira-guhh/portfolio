@@ -42,7 +42,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav aria-label="Principal" className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2 group">
           <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-electric-400 to-violet-400 flex items-center justify-center text-white font-display font-bold text-sm">
@@ -84,7 +84,9 @@ export default function Navbar() {
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Menu"
+          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={menuOpen}
+          aria-controls="menu-mobile"
         >
           <span className={`block w-5 h-px bg-white/70 transition-all ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
           <span className={`block w-5 h-px bg-white/70 transition-all ${menuOpen ? 'opacity-0' : ''}`} />
@@ -94,7 +96,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0a0a14]/95 backdrop-blur-xl border-b border-white/[0.06] px-6 pb-6">
+        <div id="menu-mobile" className="md:hidden bg-[#0a0a14]/95 backdrop-blur-xl border-b border-white/[0.06] px-6 pb-6">
           <ul className="flex flex-col gap-4 pt-4">
             {navItems.map(({ label, href }) => (
               <li key={href}>

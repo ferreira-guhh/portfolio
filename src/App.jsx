@@ -12,14 +12,14 @@ import { useScrollReveal } from './hooks/useScrollReveal'
 export default function App() {
   useScrollReveal()
 
-  /* Mouse-position for card glow effect */
+  /* Brilho do card que segue o mouse — atualiza só o card sob o cursor */
   useEffect(() => {
     const handleMouseMove = (e) => {
-      document.querySelectorAll('.project-card').forEach((card) => {
-        const rect = card.getBoundingClientRect()
-        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`)
-        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`)
-      })
+      const card = e.target.closest?.('.project-card')
+      if (!card) return
+      const rect = card.getBoundingClientRect()
+      card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`)
+      card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`)
     }
     window.addEventListener('mousemove', handleMouseMove, { passive: true })
     return () => window.removeEventListener('mousemove', handleMouseMove)
@@ -28,7 +28,7 @@ export default function App() {
   return (
     <div className="relative min-h-screen bg-[#06060e] text-white grid-bg">
       {/* Global noise overlay */}
-      <div className="fixed inset-0 pointer-events-none z-0 opacity-[0.025]"
+      <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-0 opacity-[0.025]"
            style={{
              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
              backgroundRepeat: 'repeat',

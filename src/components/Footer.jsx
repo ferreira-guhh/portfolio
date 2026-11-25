@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/[0.06] py-8 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center
-                      justify-between gap-4 text-xs font-mono text-white/25">
+                      justify-between gap-4 text-xs font-mono text-white/45">
         <p>
           © {year} {profile.name} · feito com React + Tailwind
         </p>
@@ -18,7 +18,6 @@ export default function Footer() {
           <a href={`mailto:${profile.email}`}
              className="hover:text-electric-400 transition-colors">Email</a>
         </div>
-        <p>v1.0.0</p>
       </div>
     </footer>
   )
