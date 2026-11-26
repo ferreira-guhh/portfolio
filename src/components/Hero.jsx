@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { profile } from '../data/portfolio'
-import { GithubIcon, LinkedinIcon } from './Icons'
+import { GithubIcon, LinkedinIcon, DownloadIcon } from './Icons'
 
 export default function Hero() {
   const canvasRef = useRef(null)
@@ -141,6 +141,11 @@ export default function Hero() {
               Ver Projetos
             </a>
 
+            {profile.resumeUrl && (
+              <a href={profile.resumeUrl} download className="btn-outline text-base">
+                <DownloadIcon /> Currículo
+              </a>
+            )}
             <a href={profile.github} target="_blank" rel="noreferrer" className="btn-outline text-base">
               <GithubIcon size={16} />
               GitHub

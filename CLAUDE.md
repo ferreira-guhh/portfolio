@@ -26,7 +26,16 @@ Idioma de trabalho: português. O Gustavo busca vaga de **estágio / dev júnior
 | pix-caixa | pix-caixa | **não entra** no portfólio (sistema de uso interno da loja) | — |
 
 ## Pendências gerais
-- Currículo em PDF (botão "Baixar currículo") e foto no "Sobre" — o Gustavo vai enviar.
+- Currículo: está em `public/curriculo-gustavo-ferreira.pdf` (botões no topo e no contato). Para
+  atualizar, substitua o arquivo com o mesmo nome. A versão atual tem pendências: cabeçalho com nome
+  sobreposto ao telefone, "3º semestre" desatualizado, link bazaranapaula.com.br fora do ar (404),
+  StoreCore descrito como freelance "Atual" (no portfólio é demo) e erros de digitação.
+- Foto no "Sobre" — o Gustavo vai enviar.
+- O Gustavo estagia na área de informática desde jun/2026 (detalhes virão no documento de contexto).
+  Revisar o selo "disponível para estágio" quando esse contexto chegar. **Nunca** publicar dados
+  pessoais (CPF, RG, endereço, bolsa) de documentos que ele enviar.
+- Sistema de Agendamento (barbearia), repo `Agendamento-online` (privado): está no currículo mas não
+  no portfólio — avaliar incluir.
 - Bio e linha do tempo (`timeline` em `portfolio.js`): o Gustavo vai mandar um documento com o
   que aconteceu desde 2026 Q2 — atualizar tudo no final. Em jan/2027 começa o 5º semestre de CC (UNIP).
 - Atualizar dependências (React 19, Vite, Tailwind 4) — baixa prioridade.

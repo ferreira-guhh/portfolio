@@ -17,7 +17,8 @@ Atualmente, busco uma oportunidade como Desenvolvedor Júnior ou Estagiário, on
   email: 'gualexandrino13@gmail.com',
   github: 'https://github.com/ferreira-guhh',
   linkedin: 'https://www.linkedin.com/in/gustavo-ferreira-alexandrino/',
-  whatsapp: '+5517981253926', 
+  whatsapp: '+5517981253926',
+  resumeUrl: '/curriculo-gustavo-ferreira.pdf', // troque o arquivo em public/ para atualizar
 }
 
 export const projects = [
