@@ -1,5 +1,5 @@
 import { profile } from '../data/portfolio'
-import { GithubIcon, LinkedinIcon, MailIcon, WhatsappIcon } from './Icons'
+import { GithubIcon, LinkedinIcon, MailIcon, WhatsappIcon, DownloadIcon } from './Icons'
 
 export default function Contact() {
   return (
@@ -55,6 +55,12 @@ export default function Contact() {
             <WhatsappIcon />
             WhatsApp
           </a>
+
+          {profile.resumeUrl && (
+            <a href={profile.resumeUrl} download className="btn-outline text-base px-8 py-3.5">
+              <DownloadIcon /> Baixar currículo
+            </a>
+          )}
 
           <a href={profile.linkedin} target="_blank" rel="noreferrer" className="btn-outline text-base px-8 py-3.5">
             <LinkedinIcon />
